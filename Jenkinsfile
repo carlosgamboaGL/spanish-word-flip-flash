@@ -24,7 +24,6 @@ pipeline {
                     agent {
                         docker {
                             image 'node:22-alpine'
-                            reuseNode true
                         }
                     }
                     steps {
@@ -37,7 +36,6 @@ pipeline {
                     agent {
                         docker {
                             image 'mcr.microsoft.com/playwright:v1.54.2-jammy'
-                            reuseNode true
                         }
                     }
                     steps {
@@ -50,7 +48,6 @@ pipeline {
                     agent {
                         docker {
                             image 'mcr.microsoft.com/playwright:v1.54.2-jammy'
-                            reuseNode true
                         }
                     }
                     environment {
