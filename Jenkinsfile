@@ -29,6 +29,7 @@ pipeline {
                     }
                     steps {
                         // Unit tests with Vitest
+                        sh 'npm ci'
                         sh 'npx vitest run --reporter=verbose'
                     }
                 }
@@ -40,6 +41,7 @@ pipeline {
                         }
                     }
                     steps {
+                        sh 'npm ci'
                         sh 'npx playwright test'
                     }
                 }
@@ -55,6 +57,7 @@ pipeline {
                         E2E_BASE_URL = 'https://spanish-cards.netlify.app/'
                     }
                     steps {
+                        sh 'npm ci'
                         sh 'npx playwright test'
                     }
                 }
